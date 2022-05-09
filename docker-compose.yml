@@ -1,6 +1,9 @@
 version: '2'
 
 services:
+    node:
+        build: ./app
+
     nginx:
         image: nginx:1.21.6
         ports:
@@ -24,7 +27,7 @@ services:
     grafana:
         image: grafana/grafana:8.4.6
         ports:
-            - "80:3000"
+            - "8081:3000"
         volumes:
             - "grafana_config:/var/lib/grafana"
 
@@ -40,6 +43,14 @@ services:
             - "/var/run:/var/run:rw"
             - "/sys:/sys:ro"
             - "/var/lib/docker/:/var/lib/docker:ro"
+    
+    bbox:
+        image: arqsoft/bbox:202201.1
+        ports:
+            - "8082:9090"
+            - "8083:9091"
+        volumes:
+            - ./config.properties:/opt/bbox/config.properties:ro
 
 volumes:
     grafana_config:

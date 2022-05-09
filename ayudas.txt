@@ -1,0 +1,29 @@
+
+docker pull arqsoft/bbox:202201.1
+
+sudo docker-compose up -d
+sudo docker-compose stop
+docker ps
+
+
+npm install
+npm run scenario root node
+
+
+cAdvisor:
+	http://localhost:8080
+	(Entrar en Subcontainer y luego en /docker)
+
+Graphite:
+	http://localhost:8090/
+
+Grafana:
+	http://localhost:8081
+
+	Por default, user: admin, password: admin
+	Configuration --> Data Sources --> Graphite
+	URL: http://graphite		(por ser puerto 80, no hace falta nada más)
+	version: 1.1
+	type: default
+	Save & Test
+	Dashboard --> Import (subir archivo /perf/dashboard.json)
