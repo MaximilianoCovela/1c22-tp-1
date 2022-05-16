@@ -14,10 +14,10 @@ config:
     - name: Ramp
       duration: 30
       arrivalRate: 5
-      rampTo: 5000
+      rampTo: 200
     - name: Plain
       duration: 10
-      arrivalRate: 5000
+      arrivalRate: 300
     
 
 scenarios:

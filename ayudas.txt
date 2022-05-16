@@ -4,6 +4,10 @@ docker pull arqsoft/bbox:202201.1
 sudo docker-compose build
 sudo docker-compose up -d
 
+Si queremos escalar a varios workers:
+	docker-compose up --scale node=3 -d
+
+
 sudo docker-compose stop
 sudo docker-compose ps
 

@@ -10,7 +10,7 @@ app.get("/ping", (req, res) => {
   res.status(200).send("ping");
 });
 
-app.get("/bbox1", (req, res) => {
+app.get("/bbox9090", (req, res) => {
     axios.get(`http://bbox:9090/`)
         .then(result => {
             res.send(`${result.data}`);
@@ -20,7 +20,7 @@ app.get("/bbox1", (req, res) => {
         });
 });
 
-app.get("/bbox2", (req, res) => {
+app.get("/bbox9091", (req, res) => {
   axios.get(`http://bbox:9091/`)
       .then(result => {
           res.send(`${result.data}`);
@@ -38,7 +38,7 @@ app.get("/delay", (req, res) => {
 
 app.get("/heavy", (req, res) => {
   let start = new Date();
-  while(new Date() - start < 5000);
+  while(new Date() - start < 1000);
   res.status(200).send("heavy");
 });
 

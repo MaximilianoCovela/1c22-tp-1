@@ -21,7 +21,7 @@ config:
     
 
 scenarios:
-  - name: bbox1 (/)
+  - name: bbox9090 (/)
     flow:
       - get:
-          url: '/bbox1'
+          url: '/bbox9090'
