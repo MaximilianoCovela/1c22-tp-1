@@ -14,20 +14,13 @@ config:
 
   phases:
     - name: Ramp
-      duration: 30
+      duration: 60 
       arrivalRate: 1
-      rampTo: 100
-    # - pause: 10
-    # - name: Plain
-    #  duration: 30
-    #  arrivalRate: 10
-    # - pause: 10
-    # - name: Plain   # End
-    #   duration: 10
-    #   arrivalRate: 1
+      rampTo: 20
+    - name: Plain
+      duration: 30
+      arrivalRate: 20
     
-    
-
 scenarios:
   - name: Heavy (/)
     flow:

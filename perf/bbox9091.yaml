@@ -9,7 +9,7 @@ config:
           prefix: "artillery-node"
 
   pool: 50 # All HTTP requests from all virtual users will be sent over the same connections
-
+   
   phases:
   - name: Rampa-a-100
     duration: 30
@@ -27,7 +27,7 @@ config:
     arrivalRate: 200
 
 scenarios:
-  - name: bbox9090 (/)
+  - name: bbox9091 (/)
     flow:
       - get:
-          url: '/bbox9090'
+          url: '/bbox9091'

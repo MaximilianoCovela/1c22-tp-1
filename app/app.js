@@ -38,7 +38,12 @@ app.get("/delay", (req, res) => {
 
 app.get("/heavy", (req, res) => {
   let start = new Date();
-  while(new Date() - start < 1000);
+  for (;;) {
+    let now = new Date();
+    if (now - start >= 50) {
+      break;
+    }
+  }
   res.status(200).send("heavy");
 });
 

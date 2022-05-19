@@ -16,7 +16,8 @@ Para correr las pruebas, ejecutar dentro de la carpeta /perf:
 	npm run scenario root node
 	npm run scenario ping node (notar que va el nombre del archivo, sin la extensión .yaml)
 	npm run scenario heavy node
-	npm run scenario bbox1 node
+	npm run scenario bbox9090 node
+	npm run scenario bbox9091 node
 
 
 cAdvisor:
